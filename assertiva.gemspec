@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "assertiva/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "assertiva_ruby"
+  spec.name          = "assertiva"
   spec.version       = Assertiva::VERSION
   spec.authors       = ["Rafael Fonseca"]
   spec.email         = ["rhrfonseca@gmail.com"]
