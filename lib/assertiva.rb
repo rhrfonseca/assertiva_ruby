@@ -5,7 +5,7 @@ require "rest-client"
 require "json"
 
 module Assertiva
-  RestClient.log = 'stdout'
+  # RestClient.log = 'stdout'
 
   class << self
     attr_accessor :api_key
