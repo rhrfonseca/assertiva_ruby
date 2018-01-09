@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "assertiva_ruby/version"
+require "assertiva/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "assertiva_ruby"
-  spec.version       = AssertivaRuby::VERSION
+  spec.version       = Assertiva::VERSION
   spec.authors       = ["Rafael Fonseca"]
   spec.email         = ["rhrfonseca@gmail.com"]
 
@@ -26,4 +26,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "vcr"
   spec.add_development_dependency "pry"
   spec.add_development_dependency "webmock"
+
+  spec.add_dependency "rest-client"
 end
