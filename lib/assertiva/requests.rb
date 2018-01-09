@@ -3,8 +3,9 @@ module Assertiva
     def self.post(path, params={})
       raise NoApiKey unless Assertiva.api_key
       headers = {
-        Authorization: Assertiva.api_key,
-        Accept: "application/json",
+        authorization: Assertiva.api_key,
+        accept: "application/json;charset=UTF-8",
+        content_type: "application/json;charset=UTF-8"
       }
 
       url = Assertiva.base_url +  path
