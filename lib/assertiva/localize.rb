@@ -21,9 +21,9 @@ module Assertiva
 
     def self.query_by_name_or_address(query_params)
       begin
-        
-      rescue => e
         Requests.post(self.paths[:by_name_or_address], query_params)
+      rescue => e
+        raise
       end
     end
   end
