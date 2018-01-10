@@ -13,7 +13,7 @@ module Assertiva
       begin
         response = RestClient.post(url, params.to_json, headers)
       rescue => e
-        e
+        raise
       end
     end
   end

@@ -12,11 +12,19 @@ module Assertiva
     end
 
     def self.query_by_cpf(cpf)
-      Requests.post(self.paths[:by_cpf] + "?cpf=#{cpf}")
+      begin
+        Requests.post(self.paths[:by_cpf] + "?cpf=#{cpf}")
+      rescue => e
+        raise
+      end
     end
 
     def self.query_by_name_or_address(query_params)
-      Requests.post(self.paths[:by_name_or_address], query_params)
+      begin
+        
+      rescue => e
+        Requests.post(self.paths[:by_name_or_address], query_params)
+      end
     end
   end
 end
